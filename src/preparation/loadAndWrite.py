@@ -1,0 +1,41 @@
+import requests #Used to service API connection
+from lxml import html #Used to parse XML
+from bs4 import BeautifulSoup #Used to read XML table on webpage
+import pandas as pd
+from common import cFunction as cf
+import numpy as np
+
+# get dataList to load and write
+dataList = pd.read_excel("../../data/inbound/dataList.xlsx")
+dataList = dataList.fillna("")
+
+# get dataList to load and write
+for dataCount in range(0,len(dataList)):
+
+    inputUrl = dataList.loc[dataCount, "사이트"]
+    inputKey = dataList.loc[dataCount, "서비스키"]
+    inputParameter = dataList.loc[dataCount, "파라미터"]
+    inputFolder = dataList.loc[dataCount, "폴더명"]
+    inputFile = dataList.loc[dataCount, "서비스명"]
+    inputDataType = dataList.loc[dataCount, "데이터타입"]
+    print(inputUrl)
+
+    url = cf.makeURL(inputUrl,inputKey,inputParameter)
+    print(url)
+
+    newDF = pd.DataFrame()
+    if (inputDataType == "xml"):
+        newDF = cf.xmlProcess(url)
+    elif(inputDataType == "json"):
+        newDF = cf.jsonProcess(url)
+    elif(inputDataType == "csv"):
+        newDF = cf.csvProcess(url)
+
+    outPath = "../../data/outbound/"
+    fullOutPath = outPath+inputFolder+"/"+inputFile+".csv"
+    print(fullOutPath)
+
+    try:
+        newDF.to_csv(fullOutPath, index=False, encoding="ms949")
+    except Exception as x:
+        print(x)

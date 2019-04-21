@@ -1,3 +1,4 @@
+import os
 import requests #Used to service API connection
 from lxml import html #Used to parse XML
 from bs4 import BeautifulSoup #Used to read XML table on webpage
@@ -58,3 +59,10 @@ def csvProcess(url):
 
     df = pd.read_csv(url, encoding="ms949")
     return df
+
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print ('Error: Creating directory. ' +  directory)

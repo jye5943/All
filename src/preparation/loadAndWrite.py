@@ -5,15 +5,26 @@ import pandas as pd
 from common import cFunction as cf
 import numpy as np
 
-# get dataList to load and write
-dataList = pd.read_excel("../../data/inbound/dataList.xlsx")
+# get dataList from filesystem to load and write
+#dataList = pd.read_excel("../../data/inbound/dataList.xlsx")
+
+# get dataList from spreadsheet to load and write
+dataList = pd.read_csv("https://docs.google.com/spreadsheets/d/1VngqG-m7G8k1587c21MZoheR1Fz3amp1mJtiBvA1Jb0/export?format=csv&gid=0")
 print("### The total number of target data is " + str(len(dataList)))
 
 # Filtering -> get dataList only defined url
 dataList = dataList[   dataList['사이트'].notnull() ]
 print(dataList[["사이트"]])
 print("### The total number of filtered data is " + str(len(dataList)))
+
+# create folder to save result
+outPath = "../../data/outbound/"
+folderList = dataList["폴더명"].tolist()
+for i in folderList:
+    cf.createFolder(outPath+i)
+
 dataList = dataList.fillna("")
+dataList = dataList.reset_index(drop=True)
 
 # get dataList to load and write
 for dataCount in range(0,len(dataList)):
@@ -27,7 +38,7 @@ for dataCount in range(0,len(dataList)):
     print(inputUrl)
 
     url = cf.makeURL(inputUrl,inputKey,inputParameter)
-    print(url)
+    print("fullUrl is " + url)
 
     newDF = pd.DataFrame()
     if (inputDataType == "xml"):
@@ -37,8 +48,7 @@ for dataCount in range(0,len(dataList)):
     elif(inputDataType == "csv"):
         newDF = cf.csvProcess(url)
 
-    outPath = "../../data/outbound/"
-    fullOutPath = outPath+inputFolder+"/"+inputFile+".csv"
+    fullOutPath = outPath+inputFolder+"/"+inputFolder+inputFile+".csv"
     print(fullOutPath)
 
     try:

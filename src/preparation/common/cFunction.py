@@ -26,7 +26,7 @@ def xmlProcess(url):
         for item in iterData:
             item_list = []
             # Fill the value in one row
-            for tag in item.findChildren():
+            for tag in item.find_all():
                 try:
                     tagname = tag.name
                     if rows == 0:

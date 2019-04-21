@@ -7,6 +7,12 @@ import numpy as np
 
 # get dataList to load and write
 dataList = pd.read_excel("../../data/inbound/dataList.xlsx")
+print("### The total number of target data is " + str(len(dataList)))
+
+# Filtering -> get dataList only defined url
+dataList = dataList[   dataList['사이트'].notnull() ]
+print(dataList[["사이트"]])
+print("### The total number of filtered data is " + str(len(dataList)))
 dataList = dataList.fillna("")
 
 # get dataList to load and write

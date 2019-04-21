@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b1637ccf-f375-4953-908c-493bd6fe2290" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/preparation/common/cFunction.py" afterPath="$PROJECT_DIR$/src/preparation/common/cFunction.py" />
+      <change beforePath="$PROJECT_DIR$/src/preparation/loadAndWrite.py" afterPath="$PROJECT_DIR$/src/preparation/loadAndWrite.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +17,8 @@
       <file leaf-file-name="loadAndWrite.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/preparation/loadAndWrite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+            <state relative-caret-position="256">
+              <caret line="71" column="16" lean-forward="true" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -29,7 +29,7 @@
       <file leaf-file-name="cFunction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/preparation/common/cFunction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
+            <state relative-caret-position="874">
               <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -59,12 +59,12 @@
         <option value="$PROJECT_DIR$/src/preparation/cFunction.py" />
         <option value="$PROJECT_DIR$/src/common/cFunction.py" />
         <option value="$PROJECT_DIR$/src/preparation/loadData.py" />
-        <option value="$PROJECT_DIR$/src/preparation/loadAndWrite.py" />
         <option value="$PROJECT_DIR$/src/preparation/common/cFunction.py" />
+        <option value="$PROJECT_DIR$/src/preparation/loadAndWrite.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="240" />
     <option name="y" value="128" />
     <option name="width" value="1440" />
@@ -86,8 +86,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,18 +153,20 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\git_master\pycharmWork\src\preparation\common" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\git_master\pycharmWork\src\preparation" />
       <recent name="D:\git_master\pycharmWork\data\inbound" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\git_master\pycharmWork\src\preparation\common" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -246,7 +246,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33854166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -277,6 +277,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/preparation/loadAndWrite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/preparation/common/cFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/preparation/loadAndWrite.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -358,7 +378,7 @@
     <entry file="file://$PROJECT_DIR$/data/outbound/1_자료1/자료1_서비스1.csv" />
     <entry file="file://$PROJECT_DIR$/src/preparation/common/cFunction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="874">
           <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -368,8 +388,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/preparation/loadAndWrite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+        <state relative-caret-position="256">
+          <caret line="71" column="16" lean-forward="true" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
